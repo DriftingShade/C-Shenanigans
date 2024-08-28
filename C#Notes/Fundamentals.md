@@ -36,3 +36,26 @@ __Dictionaries__
 - `Dictionary<string, string> profile = new Dictionary<string, string>();`
 - Store key-value pairs, accessed via `profile["name"]`
 - Can loop through dictionaries to get key-value pairs
+
+## Functions
+- Example: 
+```
+static void SayHello()
+{ 
+    Console.WriteLine("Hello world!");
+}
+```
+- Passing in parameters require the data type to be specified like so:
+```
+static void SayHelloWithName(string firstName, string lastName)
+{
+    Console.WriteLine($"Hello {firstName} {lastName}, how are you doing today?");
+}
+```
+- And we invoke the functions like this:
+```
+SayHello();
+// Outputs Hello World!
+SayHelloWithName("John", "Doe");
+// Outputs Hello John Doe, how are you doing today?
+```
