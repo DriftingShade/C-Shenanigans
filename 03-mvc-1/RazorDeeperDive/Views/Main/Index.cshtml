@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/pico.fuchsia.min.css">
+    <title>Home Page</title>
+
+</head>
+
+<body>
+    <main class="container">
+        <nav>
+            <ul>
+                <li><strong>Razor Deeper Diver</strong></li>
+            </ul>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/sal">Sal</a></li>
+                <li><a href="#">Products</a></li>
+            </ul>
+        </nav>
+        <h1>Home Page</h1>
+        @{
+            var name = "Shane";
+        }
+        <p>Welcome to the Home Page, @name!</p>
+
+        @{
+            var muppets = new List<string>()
+        {
+        "Kermit",
+        "Miss Piggy",
+        "Fozzie Bear",
+        "Gonzo",
+        "Animal"
+        };
+        }
+
+        <ul>
+            @foreach (var muppet in muppets)
+            {
+                <li>@muppet</li>
+            }
+        </ul>
+    </main>
+</body>
+
+</html>
