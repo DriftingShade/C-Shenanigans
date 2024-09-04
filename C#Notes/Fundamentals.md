@@ -39,21 +39,21 @@ __Dictionaries__
 
 ## Functions
 - Example: 
-```
+```cs
 static void SayHello()
 { 
     Console.WriteLine("Hello world!");
 }
 ```
 - Passing in parameters require the data type to be specified like so:
-```
+```cs
 static void SayHelloWithName(string firstName, string lastName)
 {
     Console.WriteLine($"Hello {firstName} {lastName}, how are you doing today?");
 }
 ```
 - And we invoke the functions like this:
-```
+```cs
 SayHello();
 // Outputs Hello World!
 SayHelloWithName("John", "Doe");

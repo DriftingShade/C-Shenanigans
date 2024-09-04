@@ -15,4 +15,25 @@ public class HomeController : Controller
         ViewBag.Word = word;
         return View("Home");
     }
+    [HttpGet("result/{favoriteResponse}")]
+    public IActionResult ItDepends(string favoriteResponse)
+    {
+        if (favoriteResponse == "Redirect")
+        {
+            return RedirectToAction("Destination");
+        } 
+        else if (favoriteResponse == "JSON")
+        {
+            return Json(new {favoriteResponse, fruit = "Banana"});
+        } 
+        else {
+            return View("ItDepends");
+        }
+    }
+
+    [HttpGet("destination")]
+    public ViewResult Destination()
+    {
+        return View("Destination");
+    }
 }
