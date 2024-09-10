@@ -14,9 +14,13 @@ public class HomeController : Controller
     }
 
     [HttpGet("")]
-    public IActionResult Index()
+    public IActionResult Index(string? message)
     {
-
+        if (message != null)
+        {
+            ViewBag.Message = message;
+        }
+    
         return View("Index");
     }
 
@@ -32,6 +36,13 @@ public class HomeController : Controller
         _logger.LogInformation("Username form is valid.");
         HttpContext.Session.SetString("username", username.Content);
         return RedirectToAction("MovieDashboard", "Movie");
+    }
+
+    [HttpGet("logout")]
+    public RedirectToActionResult Logout()
+    {
+        HttpContext.Session.Clear();
+        return RedirectToAction("Index");
     }
 
     public IActionResult Privacy()

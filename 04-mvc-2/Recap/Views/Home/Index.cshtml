@@ -6,6 +6,13 @@
 
 <div>
     <h1>Recap Movie App</h1>
+    @if(ViewBag.Message != null)
+    {
+        if(ViewBag.Message == "not-allowed")
+        {
+            <p style="color: red">You must be logged in to view that page!</p>
+        }
+    }
     <article>
         <h2>Please provide your Username to continue.</h2>
         <form asp-controller="Home" asp-action="RememberUsername" method="post">
