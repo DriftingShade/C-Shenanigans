@@ -19,7 +19,7 @@ public class Movie
     [Required(ErrorMessage = "Please enter a release date.")]
     public DateTime? ReleaseDate { get; set; }
     [Required(ErrorMessage = "Please select a rating.")]
-    [Range(0.1, 11, ErrorMessage = "Rating out of range")]
+    [Range(typeof(double), "0.1", "11", ErrorMessage = "Rating out of range")]
     public double? Rating { get; set; }
     [Required(ErrorMessage = "Please enter a duration.")]
     [Range(1, 1000, ErrorMessage = "Duration out of range")]
