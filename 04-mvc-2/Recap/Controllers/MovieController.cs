@@ -53,7 +53,7 @@ public class MovieController : Controller
         {
             return View("NewMovie");
         }
-
+        _movieService.AddMovie(movie);
         return RedirectToAction("AllMovies");
     }
 }
